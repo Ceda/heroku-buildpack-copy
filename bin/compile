@@ -43,4 +43,6 @@ for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
 #    cat $BUILD_DIR$SOURCE_FILE
  #   mkdir -p $(dirname ${DEST})
     cat $BUILD_DIR$SOURCE_FILE > $BUILD_DIR$DEST
+    cp $BUILD_DIR$SOURCE_FILE $BUILD_DIR$DEST
+
 done
