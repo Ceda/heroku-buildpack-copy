@@ -36,7 +36,7 @@ echo $BUILD_DIR
 ls $BUILD_DIR
 cat $BUILD_DIR/Copyfile
 
-for COPYSPEC in $(cat $BUILD_DIRCopyfile); do
+for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
     SOURCE_FILE=$(echo $COPYSPEC | awk -F':' '{print $1}')
     DEST=$(echo $COPYSPEC | awk -F':' '{print $2}')
     topic "Copying $SOURCE_FILE to $DEST"
