@@ -8,8 +8,12 @@ set -e
 # set -x
 
 # parse and derive params
+BUILD_DIRA=$0
+echo $BUILD_DIRA
 BUILD_DIR=$1
+echo $BUILD_DIR
 CACHE_DIR=$2
+echo $CACHE_DIR
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 function error() {
