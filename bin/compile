@@ -36,16 +36,9 @@ echo $BUILD_DIR
 ls $BUILD_DIR
 cat $BUILD_DIR/Copyfile
 
-for COPYSPEC in $(cat $BUILD_DIR/Copyfile); do
+for COPYSPEC in $(cat Copyfile); do
     SOURCE_FILE=$(echo $COPYSPEC | awk -F':' '{print $1}')
     DEST=$(echo $COPYSPEC | awk -F':' '{print $2}')
-    #topic "Echo $DEST"
-    #echo $DEST
-    #topic "Copying $SOURCE_FILE to $DEST"
-    #cat $BUILD_DIR/$SOURCE_FILE
-    #mkdir -p $(dirname ${DEST})
-    #cat $BUILD_DIR/$SOURCE_FILE > $DEST
-    #topic "cat $DEST"
-    #cat $DEST
+    topic "Copying $SOURCE_FILE to $DEST"
     cp $SOURCE_FILE $DEST
 done
